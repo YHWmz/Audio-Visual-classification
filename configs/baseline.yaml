@@ -1,0 +1,45 @@
+data:
+    path: /dssg/home/acct-stu/stu464/data/audio_visual_scenes
+    train:
+        file_path: /dssg/home/acct-stu/stu464/data/audio_visual_scenes/evaluation_setup/fold1_train.csv
+        audio_feature: /dssg/home/acct-stu/stu519/av_scene_classify_finetune/data/raw_data/train_audio-data.hdf5
+        raw_audio: /dssg/home/acct-stu/stu519/av_scene_classify_finetune/data/raw_data/train_rawaudio.hdf5
+        video_feature: /dssg/home/acct-stu/stu519/av_scene_classify_finetune/data/raw_data/train_video-data_new.hdf5
+        psla_audio_feature: /dssg/home/acct-stu/stu519/av_scene_classify_finetune/data/raw_data/train_pslaaudio.hdf5
+    val:
+        file_path: /dssg/home/acct-stu/stu464/data/audio_visual_scenes/evaluation_setup/fold1_evaluate.csv
+        audio_feature: /dssg/home/acct-stu/stu519/av_scene_classify_finetune/data/raw_data/val_audio-data.hdf5
+        raw_audio: /dssg/home/acct-stu/stu519/av_scene_classify_finetune/data/raw_data/val_rawaudio.hdf5
+        video_feature: /dssg/home/acct-stu/stu519/av_scene_classify_finetune/data/raw_data/val_video-data_new.hdf5
+        psla_audio_feature: /dssg/home/acct-stu/stu519/av_scene_classify_finetune/data/raw_data/val_pslaaudio.hdf5
+    test:
+        file_path: /dssg/home/acct-stu/stu464/data/audio_visual_scenes/evaluation_setup/fold1_test.csv
+        audio_feature: /dssg/home/acct-stu/stu519/av_scene_classify_finetune/data/raw_data/test_audio-data.hdf5
+        raw_audio: /dssg/home/acct-stu/stu519/av_scene_classify_finetune/data/raw_data/test_rawaudio.hdf5
+        video_feature: /dssg/home/acct-stu/stu519/av_scene_classify_finetune/data/raw_data/test_video-data_new.hdf5
+        psla_audio_feature: /dssg/home/acct-stu/stu519/av_scene_classify_finetune/data/raw_data/test_pslaaudio.hdf5
+
+    dataloader_args:
+        num_workers: 4
+        batch_size: 64
+
+num_classes: 10
+
+output_dir: experiments/psla-2
+
+modality: a
+audio_pretrain: psla #psla      vggish         panns
+
+optimizer:
+    type: Adam
+    args:
+        lr: !!float 1e-4
+        weight_decay: !!float 1e-4
+
+lr_scheduler:
+    args:
+        patience: 10
+        factor: 0.1
+
+epoch: 20
+early_stop: 7
