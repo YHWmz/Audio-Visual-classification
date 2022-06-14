@@ -1,4 +1,8 @@
 # 音视频场景识别
+## 依赖
+```bash
+pip install -r requirements.txt
+```
 ## 主要代码结构
 - config： 模型配置文件
 - data：包含处理好的原始数据以及数据处理脚本
