@@ -10,3 +10,4 @@ tqdm
 librosa
 torch
 torchlibrosa
+efficientnet_pytorch
