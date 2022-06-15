@@ -19,9 +19,9 @@ pip install -r requirements.txt
 1. 数据：
 
    为了加快数据的读取速度，我提前将音频与视频数据进行了预处理并存入 ./data/raw_data中。请下载以下6个数据文件并放入上述文件夹。
-   - [train_audio](https://jbox.sjtu.edu.cn/l/31EmzH), [train_video](https://jbox.sjtu.edu.cn/l/H1zPpM)
-   - [val_audio](https://jbox.sjtu.edu.cn/l/F1GEsI), [val_video](https://jbox.sjtu.edu.cn/l/F1Gzrv)
-   - [test_audio](https://jbox.sjtu.edu.cn/l/91SM43), [test_video](https://jbox.sjtu.edu.cn/l/P1yOR5)
+   - [train_audio链接](https://jbox.sjtu.edu.cn/l/31EmzH), [train_video链接](https://jbox.sjtu.edu.cn/l/H1zPpM)
+   - [val_audio链接](https://jbox.sjtu.edu.cn/l/F1GEsI), [val_video链接](https://jbox.sjtu.edu.cn/l/F1Gzrv)
+   - [test_audio链接](https://jbox.sjtu.edu.cn/l/91SM43), [test_video链接](https://jbox.sjtu.edu.cn/l/P1yOR5)
 2. 预训练模型：
    要复现代码，需要下载以下三个模型
    - PANNs：[jbox链接](https://jbox.sjtu.edu.cn/l/X1y2xi)，下载后放入ModelWeight内。
